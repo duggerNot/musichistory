@@ -1,0 +1,26 @@
+body{
+	max-width: 700px;
+	margin: 5% auto;
+}
+
+#redBox {
+
+	border: 2px;
+	border-color: black;
+	background: #FFB4B0;
+
+}
+
+#blueBox {
+	background: #4DD7FA;
+	float: left;
+}
+
+#yellowBox {
+	float: right;
+	background: #FEFAC0;
+}
+
+#songName {
+	color: #785616;
+}
