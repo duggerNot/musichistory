@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<div id="invisBox">
 <!--RED BOX-->
 	<div id="redBox">							
 		<ul id="headList">
@@ -19,13 +20,47 @@
 <!--RED BOX-->
 
 <!--BLUE BOX-->
-	<div id="blueBox">	<!--DO ALL THIS SHIT NOW YOU IDIOT-->						
+	<div id="blueBox">							
 		<section>
-			<p>Song Length:</p> <!--put song length slider here-->
-			<p>Artist:</p> <!-- put artist dropdown menu here-->
-			<p>Album:</p> <!-- put album dropdown menu here-->
-			<p>Genre:</p> <!-- put genre checklist boxes here-->
-			<!--Add a filter button here-->
+			<p>Song Length:</p> 
+			<form id="songLength">
+				<input type="range">
+				<!-- This is actually a progress bar, but the progress tag doesn't produce a bar that looks like the example and range does, so in the interest of saving time, for now this will do -->
+				<!-- <progress value="50" max="100"></progress> -->
+			</form>
+			<p>Artist:</p>
+				<select id="artistSelect">
+					<option value="Meth Dad">Meth Dad</option>
+					<option value="Religious Girls">Religious Girls</option>
+					<option value="Terror Pigeon">Terror Pigeon</option>
+					<option value="Yer Heart">Yer Heart</option>
+					<option value="Creature Comfort">Creature Comfort</option>
+				</select> 
+			<p>Album:</p>
+				<select id="albumSelect">
+					<option value="">Swimmers - Meth Dad</option>
+					<option value="">I Want To Believe - Religious Girls</option>
+					<option value="">Live It Up Before You Die It Up - Terror Pigeon</option>
+					<option value="">Yer Heart - Yer Heart</option>
+					<option value="">Fox Tales - Creature Comfort</option>
+				</select> 
+			<p>Genre:</p>
+				<div id="checkLeftSide">
+					<form>
+						<input type="checkbox">Rock<br>
+						<input type="checkbox">Pop<br>
+						<input type="checkbox">Blues
+					</form>
+				</div>
+				<div id="checkRightSide">
+					<form>
+						<input type="checkbox">Classical<br>
+						<input type="checkbox">Jazz<br>
+						<input type="checkbox">Hip Hop
+					</form>
+				</div> <!-- put genre checklist boxes here-->
+
+			<input type="button" value="Filter"><!--Add a filter button here-->
 		</section>
 	</div>										
 <!--BLUE BOX-->
@@ -67,6 +102,7 @@
 
 	</div>										
 <!--YELLOW BOX-->
+</div>
 </body>
 
 
