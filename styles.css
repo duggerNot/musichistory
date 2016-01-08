@@ -1,14 +1,21 @@
 body{
-	max-width: 700px;
 	margin: 5% auto;
 }
 
+li {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
 #redBox {
-	width: 100%;
+	width: 700px;
 	height: 50px;
 	border: 2px solid black;
 	padding: 10px;
-	margin: 10px;
+	margin: 10px auto;
 	border-style: solid;
 	background: #FFB4B0;
 
@@ -20,7 +27,7 @@ body{
 	width: 30%;
 	height: 400px;
 	padding: 10px;
-	margin: 10px;
+	margin: 5%;
 	background: #4DD7FA;
 	float: left;
 }
@@ -31,11 +38,23 @@ body{
 	width: 60%;
 	height: 400px;
 	padding: 10px;
-	margin: 10px;
+	margin: 5%;
 	float: right;
 	background: #FEFAC0;
 }
 
+
+#headList {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 #songName {
 	color: #785616;
+}
+
+#songInfo {
+
 }
