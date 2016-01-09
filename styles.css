@@ -17,15 +17,15 @@ a:hover {
 }
 
 #artistSelect {
-	width: 65%;
+	width: 80%;
 }
 
 #albumSelect {
-	width: 65%;
+	width: 80%;
 }
 #redBox {
 	width: 700px;
-	height: 50px;
+	height: 30px;
 	border: 2px solid black;
 	padding: 10px;
 	margin: auto;
@@ -74,6 +74,8 @@ a:hover {
 
 
 #headList {
+	margin: 0px;
+	padding-top: 7px;
 	list-style-type: none;
     text-decoration: none;
 }
