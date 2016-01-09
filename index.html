@@ -8,12 +8,11 @@
 </head>
 
 <body>
-	<div id="invisBox">
 <!--RED BOX-->
 	<div id="redBox">							
 		<ul id="headList">
-			<li><a href="#">View Music</a></li>
-			<li><a href="#">Add Music</a></li>
+			<li><!-- <a href="#">View Music</a> -->View Music |</li>
+			<li><a href="#">Add Music</a> |</li>
 			<li><a href="#">Profile</a></li>
 		</ul>
 	</div>										
@@ -28,22 +27,24 @@
 				<!-- This is actually a progress bar, but the progress tag doesn't produce a bar that looks like the example and range does, so in the interest of saving time, for now this will do -->
 				<!-- <progress value="50" max="100"></progress> -->
 			</form>
-			<p>Artist:</p>
-				<select id="artistSelect">
-					<option value="Meth Dad">Meth Dad</option>
-					<option value="Religious Girls">Religious Girls</option>
-					<option value="Terror Pigeon">Terror Pigeon</option>
-					<option value="Yer Heart">Yer Heart</option>
-					<option value="Creature Comfort">Creature Comfort</option>
-				</select> 
-			<p>Album:</p>
-				<select id="albumSelect">
-					<option value="">Swimmers - Meth Dad</option>
-					<option value="">I Want To Believe - Religious Girls</option>
-					<option value="">Live It Up Before You Die It Up - Terror Pigeon</option>
-					<option value="">Yer Heart - Yer Heart</option>
-					<option value="">Fox Tales - Creature Comfort</option>
-				</select> 
+			<div id="dropDowns">
+				<p>Artist:</p>
+					<select id="artistSelect">
+						<option value="Meth Dad">Meth Dad</option>
+						<option value="Religious Girls">Religious Girls</option>
+						<option value="Terror Pigeon">Terror Pigeon</option>
+						<option value="Yer Heart">Yer Heart</option>
+						<option value="Creature Comfort">Creature Comfort</option>
+					</select> 
+				<p>Album:</p>
+					<select id="albumSelect">
+						<option value="">Swimmers - Meth Dad</option>
+						<option value="">I Want To Believe - Religious Girls</option>
+						<option value="">Live It Up Before You Die It Up - Terror Pigeon</option>
+						<option value="">Yer Heart - Yer Heart</option>
+						<option value="">Fox Tales - Creature Comfort</option>
+					</select> 
+			</div>		
 			<p>Genre:</p>
 				<div id="checkLeftSide">
 					<form>
@@ -58,9 +59,12 @@
 						<input type="checkbox">Jazz<br>
 						<input type="checkbox">Hip Hop
 					</form>
-				</div> <!-- put genre checklist boxes here-->
-
-			<input type="button" value="Filter"><!--Add a filter button here-->
+				</div>
+				<br> <!-- put genre checklist boxes here-->
+			<section id="filterButton">
+				<button id="theButton">Filter</button><!--Add a filter button here-->	
+			</section>
+			
 		</section>
 	</div>										
 <!--BLUE BOX-->
@@ -69,40 +73,39 @@
 	<div id="yellowBox">
 		<section>
 			<h1 id="songName">Song Name</h1>
-				<ul id="songInfo">
-					<li>Artist</li>
-					<li>Album</li>
+				<ul id="songInfo" style="padding: 0;">
+					<li>Artist |</li>
+					<li>Album |</li>
 					<li>Genre</li>
 				</ul>
 		</section>
 		<section>
 			<h1 id="songName">Song Name</h1>
-				<ul id="songInfo">
-					<li>Artist</li>
-					<li>Album</li>
+				<ul id="songInfo" style="padding: 0;">
+					<li>Artist |</li>
+					<li>Album |</li>
 					<li>Genre</li>
 				</ul>
 		</section>
 		<section>
 			<h1 id="songName">Song Name</h1>
-				<ul id="songInfo">
-					<li>Artist</li>
-					<li>Album</li>
+				<ul id="songInfo" style="padding: 0;">
+					<li>Artist |</li>
+					<li>Album |</li>
 					<li>Genre</li>
 				</ul>
 		</section>
 		<section>
 			<h1 id="songName">Song Name</h1>
-				<ul id="songInfo">
-					<li>Artist</li>
-					<li>Album</li>
+				<ul id="songInfo" style="padding: 0;">
+					<li>Artist |</li>
+					<li>Album |</li>
 					<li>Genre</li>
 				</ul>
 		</section>
 
 	</div>										
 <!--YELLOW BOX-->
-</div>
 </body>
 
 

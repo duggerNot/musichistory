@@ -1,4 +1,5 @@
 body {
+	max-width: 750px;
 	margin: 5% auto;
 }
 
@@ -7,16 +8,27 @@ li {
 }
 
 a:hover {
-
+	color: white;
 	text-decoration: none;
 }
 
+#dropDowns {
+	max-width: 200px;
+}
+
+#artistSelect {
+	width: 65%;
+}
+
+#albumSelect {
+	width: 65%;
+}
 #redBox {
 	width: 700px;
 	height: 50px;
 	border: 2px solid black;
 	padding: 10px;
-	margin: 10px auto;
+	margin: auto;
 	border-style: solid;
 	background: #FFB4B0;
 
@@ -28,27 +40,41 @@ a:hover {
 	width: 30%;
 	height: 400px;
 	padding: 10px;
-	margin: 5%;
+	margin-top: 2%;
+	margin-left: 12px;
 	background: #4DD7FA;
 	float: left;
+}
+
+#filterButton {
+	text-align: center;
+	margin: auto;
+}
+
+#theButton {
+	height: 30px;
+	width: 65%;
+	font-size: 15pt;
 }
 
 #yellowBox {
 	box-sizing: border-box;
 	border: 2px solid black;
-	width: 60%;
+	width: 485px;
 	height: 400px;
-	padding: 10px;
-	margin: 5%;
-	float: right;
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	margin-left: 2%;
+	margin-top: 2%;
+	float: left;
 	background: #FEFAC0;
 }
 
 
 #headList {
 	list-style-type: none;
-    margin: 0;
-    padding: 0;
     text-decoration: none;
 }
 
