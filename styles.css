@@ -7,11 +7,6 @@ li {
 	display: inline;
 }
 
-a:hover {
-	color: white;
-	text-decoration: none;
-}
-
 #dropDowns {
 	max-width: 200px;
 }
@@ -23,26 +18,26 @@ a:hover {
 #albumSelect {
 	width: 80%;
 }
-#redBox {
+#topBox {
 	width: 700px;
 	height: 30px;
 	border: 2px solid black;
 	padding: 10px;
 	margin: auto;
 	border-style: solid;
-	background: #FFB4B0;
-
+	background: #ACE16D;
 }
 
-#blueBox {
+#sideBox {
 	box-sizing: border-box;
 	border: 2px solid black;
+	border-radius: 14px;
 	width: 30%;
 	height: 400px;
 	padding: 10px;
 	margin-top: 2%;
 	margin-left: 12px;
-	background: #4DD7FA;
+	background: #72E16D;
 	float: left;
 }
 
@@ -57,9 +52,11 @@ a:hover {
 	font-size: 15pt;
 }
 
-#yellowBox {
+#songContentBox {
+	overflow: scroll;
 	box-sizing: border-box;
 	border: 2px solid black;
+	border-radius: 14px;
 	width: 485px;
 	height: 400px;
 	padding-top: 10px;
@@ -69,15 +66,18 @@ a:hover {
 	margin-left: 2%;
 	margin-top: 2%;
 	float: left;
-	background: #FEFAC0;
+	background: #6DE1A2;
 }
 
+#addMusic {
+	display: none;
+}
 
 #headList {
 	margin: 0px;
 	padding-top: 7px;
 	list-style-type: none;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .songName {
@@ -85,7 +85,7 @@ a:hover {
 }
 
 #songInfo {
-
+	padding: 0;
 }
 
 #songLength {
