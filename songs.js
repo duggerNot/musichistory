@@ -1,52 +1,64 @@
-//provided song list
+var songCount = 0;
 var songs = [];
 
-songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+var songObject = {
+	songTitle: "",
+	artistName: "",
+	albumName: "",
 
-// log the songs array
-console.log("songs array", songs);
-
-// create arrays for future song information
-var songTitles = [];
-var songArtist = [];
-var songAlbum = [];
-var songGenre = [];
-
-// adding songs to the beginning and the end of the array
-songs.unshift("Front song - by Some Band on the album Whatever"); //add song to beginning
-songs.push("Back Song - by Some Other Band on the album Who Knows"); //add song to end
-
-// log the songs array after adding to the front and back of the array
-console.log("songs array after additions", songs);
-
-// removing and replacing characters
-for (var i = 0; i < songs.length; i++) {
-	songs[i] = songs[i].replace(/>/g, "-");
-	songs[i] = songs[i].replace("*", "");
-	songs[i] = songs[i].replace(/@/g, "");
-	songs[i] = songs[i].replace("(", "");
-	songs[i] = songs[i].replace(/!/g, "");
 };
 
-// log the array after removing incorrect characters
-console.log("corrected array", songs);
 
-// replace yellow box with the song array
-var yellowBoxDiv = document.getElementById("yellowBox") //save html element
-var yellowBoxSongList = yellowBoxDiv.innerHTML; //save guts of html element
+var songBoxDiv = document.getElementById("songContentBox"); 
 
-//loop to add array to guts
-for (var i = 0; i < songs.length; i++) {
-	yellowBoxSongList += "<p>" + songs[i] + "</p>";
+var musicList = document.getElementById("listMusic");
+var musicAdd = document.getElementById("addMusic");
+
+var listTab = document.getElementById("showListMusic");
+var addTab = document.getElementById("showAddMusic");
+
+document.getElementById("addSongInfo").onclick = function() {
+	getSongInfo();
+	addSong();
+	console.log("song object", songObject);
+}
+
+listTab.onclick = function() {
+	showList();
+	listTab.classList.toggle("active");
+	addTab.classList.toggle("active");
 };
-//log to see the guts
-console.log("whatever", yellowBoxSongList);
-//return guts to html element
-yellowBoxDiv.innerHTML = yellowBoxSongList;
+addTab.onclick = function() {
+	showAdd();
+	addTab.classList.toggle("active");
+	listTab.classList.toggle("active");
+}
+
+function showList() {
+	musicList.style.display = "block";
+	musicAdd.style.display = "none";
+}
+
+function showAdd() {
+	musicAdd.style.display = "block";
+	musicList.style.display = "none";
+}
+
+function getSongInfo() {
+	songObject.songTitle = document.getElementById("titleInputBox").value;
+	songObject.artistName = document.getElementById("artistInputBox").value;
+	songObject.albumName = document.getElementById("albumInputBox").value;
+	songs.push(songObject);
+	songCount++;
+}
+
+function addSong() {
+		songBoxDiv.innerHTML += `<h1><p>  ${songs[songCount-1].songTitle} </p></h1>`;
+		songBoxDiv.innerHTML += `<p>  ${songs[songCount-1].artistName} </p>`;
+		songBoxDiv.innerHTML += `<p>  ${songs[songCount-1].albumName} </p>`;
+
+}
+
 
 
 

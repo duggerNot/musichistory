@@ -3,110 +3,96 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Music History</title>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <!--RED BOX-->
-	<div id="redBox">							
-		<ul id="headList">
-			<li><!-- <a href="#">View Music</a> -->View Music |</li>
-			<li><a href="#">Add Music</a> |</li>
-			<li><a href="#">Profile</a></li>
-		</ul>
-	</div>										
-<!--RED BOX-->
 
-<!--BLUE BOX-->
-	<div id="blueBox">							
-		<section>
-			<p>Song Length:</p> 
-			<form id="songLength">
-				<input type="range">
-				<!-- This is actually a progress bar, but the progress tag doesn't produce a bar that looks like the example and range does, so in the interest of saving time, for now this will do -->
-				<!-- <progress value="50" max="100"></progress> -->
-			</form>
-			<div id="dropDowns">
-				<p>Artist:</p>
-					<select id="artistSelect">
-						<option value="Meth Dad">Meth Dad</option>
-						<option value="Religious Girls">Religious Girls</option>
-						<option value="Terror Pigeon">Terror Pigeon</option>
-						<option value="Yer Heart">Yer Heart</option>
-						<option value="Creature Comfort">Creature Comfort</option>
-					</select> 
-				<p>Album:</p>
-					<select id="albumSelect">
-						<option value="">Swimmers - Meth Dad</option>
-						<option value="">I Want To Believe - Religious Girls</option>
-						<option value="">Live It Up Before You Die It Up - Terror Pigeon</option>
-						<option value="">Yer Heart - Yer Heart</option>
-						<option value="">Fox Tales - Creature Comfort</option>
-					</select> 
-			</div>		
-			<p>Genre:</p>
-				<div id="checkLeftSide">
-					<form>
-						<input type="checkbox">Rock<br>
-						<input type="checkbox">Pop<br>
-						<input type="checkbox">Blues
-					</form>
-				</div>
-				<div id="checkRightSide">
-					<form>
-						<input type="checkbox">Classical<br>
-						<input type="checkbox">Jazz<br>
-						<input type="checkbox">Hip Hop
-					</form>
-				</div>
-				<br> 
-			<section id="filterButton">
-				<button id="theButton">Filter</button><!--Add a filter button here-->	
+	<nav class="navbar navbar-default navbar-fixed-top">
+  	<div class="container">
+	  	<ul class="nav nav-tabs nav-justified">
+			  <li role="presentation" class="active" id="showListMusic"><a href="#">List Music</a></li>
+			  <li role="presentation" id="showAddMusic"><a href="#">Add Music</a></li>
+			</ul>
+		</div>
+	</nav>										
+
+	<div id="listMusic">
+
+		<div id="sideBox">							
+			<section>
+				<p>Song Length:</p> 
+				<form id="songLength">
+					<input type="range">
+					<!-- This is actually a progress bar, but the progress tag doesn't produce a bar that looks like the example and range does, so in the interest of saving time, for now this will do -->
+					<!-- <progress value="50" max="100"></progress> -->
+				</form>
+				<div id="dropDowns">
+					<p>Artist:</p>
+						<select id="artistSelect">
+							<option value="Meth Dad">Meth Dad</option>
+							<option value="Religious Girls">Religious Girls</option>
+							<option value="Terror Pigeon">Terror Pigeon</option>
+							<option value="Yer Heart">Yer Heart</option>
+							<option value="Creature Comfort">Creature Comfort</option>
+						</select> 
+					<p>Album:</p>
+						<select id="albumSelect">
+							<option value="">Swimmers - Meth Dad</option>
+							<option value="">I Want To Believe - Religious Girls</option>
+							<option value="">Live It Up Before You Die It Up - Terror Pigeon</option>
+							<option value="">Yer Heart - Yer Heart</option>
+							<option value="">Fox Tales - Creature Comfort</option>
+						</select> 
+				</div>		
+				<p>Genre:</p>
+					<div id="checkLeftSide">
+						<form>
+							<input type="checkbox">Rock<br>
+							<input type="checkbox">Pop<br>
+							<input type="checkbox">Blues
+						</form>
+					</div>
+					<div id="checkRightSide">
+						<form>
+							<input type="checkbox">Classical<br>
+							<input type="checkbox">Jazz<br>
+							<input type="checkbox">Hip Hop
+						</form>
+					</div>
+					<br> 
+				<section id="filterButton">
+					<button id="theButton">Filter</button><!--Add a filter button here-->	
+				</section>
+				
 			</section>
+		</div>										
+
+		<div id="songContentBox">
 			
-		</section>
-	</div>										
-<!--BLUE BOX-->
+	
+		</div>
+	</div>
 
-<!--YELLOW BOX-->
-	<div id="yellowBox">
-		<!-- <section>
-			<h1 id="songName">No Parents</h1>
-				<ul id="songInfo" style="padding: 0;">
-					<li>Meth Dad |</li>
-					<li>Swimmers |</li>
-					<li>Pop</li>
-				</ul>
-		</section>
-		<section>
-			<h1 id="songName">Charity</h1>
-				<ul id="songInfo" style="padding: 0;">
-					<li>Religious Girls |</li>
-					<li>I Want To Believe |</li>
-					<li>uhhh..</li>
-				</ul>
-		</section>
-		<section>
-			<h1 id="songName">BYOYOLO</h1>
-				<ul id="songInfo" style="padding: 0;">
-					<li>TerrorPigeon |</li>
-					<li>Live it up before you die it up |</li>
-					<li>Pop</li>
-				</ul>
-		</section>
-		<section>
-			<h1 id="songName">Don't Give Up</h1>
-				<ul id="songInfo" style="padding: 0;">
-					<li>Yer Heart |</li>
-					<li>Yer Heart |</li>
-					<li>Pop</li>
-				</ul>
-		</section>
- -->
-	</div>										
-<!--YELLOW BOX-->
 
+	<div id="addMusic">
+		<p id="songTitleInput">Song Title: <input type="text" id="titleInputBox"></p>
+		<p id="artistInput">Artist Name: <input type="text" id="artistInputBox"></p>
+		<p id="albumInput">Album Name: <input type="text" id="albumInputBox"></p>
+		<button id="addSongInfo">Add</button>
+	</div>
+
+
+
+	<!-- jQuery and Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="songs.js"></script>
 </body>
 
